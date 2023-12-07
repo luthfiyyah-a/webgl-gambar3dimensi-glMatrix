@@ -77,9 +77,28 @@ function main(){
   var theta = glMatrix.glMatrix.toRadian(1);//sudutnya adalah 1 derajat   
   var animate = function(){
       if(!freeze){
-          glMatrix.mat4.rotate(modmatrix, modmatrix, theta, [1.0,1.0,1.0]);
+          glMatrix.mat4.rotate(modmatrix, modmatrix, theta, [0.05,0.05,0.05]);
       }
-      
+      if(!freezeTranslateXpositive){
+        glMatrix.mat4.translate(modmatrix, modmatrix, [0.03,0.0,0.0]);
+        console.log('translate x positive');
+      }
+      if(!freezeTranslateXnegative){
+        glMatrix.mat4.translate(modmatrix, modmatrix, [-0.03,0.0,0.0]);
+      }
+      if(!freezeTranslateYpositive){
+        glMatrix.mat4.translate(modmatrix, modmatrix, [0.0,0.03,0.0]);
+      }
+      if(!freezeTranslateYnegative){
+        glMatrix.mat4.translate(modmatrix, modmatrix, [0.0,-0.03,0.0]);
+      }
+    //   if(!freezeTranslateY){
+    //     glMatrix.mat4.translate(modmatrix, modmatrix, [0.0,1.0,0.0]);
+    //   }
+    //   if(!freezeTranslateZ){
+    //     glMatrix.mat4.translate(modmatrix, modmatrix, [0.0,0.0,1.0]);
+    //   }
+
       gl.enable(gl.DEPTH_TEST);
       gl.depthFunc(gl.LEQUAL);
 
@@ -98,5 +117,6 @@ function main(){
 
       window.requestAnimationFrame(animate);
   }    
+  console.log("hello");
   animate(0);    
 }
