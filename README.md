@@ -1,5 +1,7 @@
 ﻿# webgl-gambar3dimensi-glMatrix
 
+Hasil Web : https://luthfiyyah-a.github.io/webgl-gambar3dimensi-glMatrix/
+
 Ini adalah penugasan grafika komputer.
 
 WebGL, singkatan dari "Web Graphics Library," adalah sebuah teknologi yang memungkinkan kita untuk membuat grafis 2D dan 3D interaktif secara langsung di browser web tanpa perlu plugin tambahan. WebGL memanfaatkan kemampuan GPU (Graphics Processing Unit) komputer untuk menghasilkan grafis yang tingkat kinerjanya sangat tinggi.
